@@ -324,6 +324,7 @@ figure {
     padding: 10px 0;
     border-radius: 5px;
     width: 100px;
+    
 
 
 }
@@ -363,6 +364,22 @@ figure {
     /* z-index: 3; */
 
 }
+
+.burger-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, .5);
+    display: none;
+    line-height: 40px;
+    text-align: center;
+    position: fixed;
+    z-index: 4;
+    left: 5px;
+    top: 5px;
+    color:  white;
+    
+}
 /* desktop first que empieces desde MQ mas grande */
 
 @media screen and (max-width:1024px) {
@@ -397,6 +414,10 @@ figure {
 }
 
 @media screen and (max-width:767px) {
+    .burger-button {
+        display: block;
+    }
+
     .hero {
         height:auto ;
         position: relative;
@@ -427,9 +448,32 @@ figure {
     }
     .header a {
         justify-content: center;
+        height: 40px;
+        font-size: 2em;
+        text-decoration: underline;
+        margin-bottom: .5em;
     }
     .header .logo {
         text-align: center;
+    }
+
+    .menu {
+        position: fixed;
+        background: rgba(5, 111, 255, .9);
+        z-index: 3;
+        top: 0;
+        left: -100vw;
+        width: 100vw;
+        /* height: 100vh; */
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    .menu .is.active {
+        left: 0;
     }
 
     .project {
@@ -477,6 +521,8 @@ figure {
     .event-description {
         text-align:center;
     }
+
+
     
     
 }
